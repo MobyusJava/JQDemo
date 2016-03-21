@@ -28,6 +28,7 @@ public class ShowNumbers extends HttpServlet {
 		response.setContentType("application/json");
 		String outputPage = "/WEB-INF/results/show-nums.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(outputPage);
+		//using include and not forward to return to calling page
 		dispatcher.include(request, response);
 	}
 }
